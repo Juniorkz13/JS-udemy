@@ -20,3 +20,5 @@ const bhaskara = (a, b, c) => {
 bhaskara(3, -5, 12)
 bhaskara(4, 2, -6)
 bhaskara(7, 3, 4)
+bhaskara(2, 5, -3)
+bhaskara(2, -5, 2)
