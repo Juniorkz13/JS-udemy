@@ -43,7 +43,10 @@
     document.querySelectorAll('[wm-folder]').forEach((folder) => {
         folder.onclick = (e) => {
             e.preventDefault()
-            folder.nextElementSibling.classList.toggle('hide')
+            folder.nextElementSibling.style.display =
+                folder.nextElementSibling.style.display == 'none'
+                    ? 'block'
+                    : 'none'
         }
     })
 </script>

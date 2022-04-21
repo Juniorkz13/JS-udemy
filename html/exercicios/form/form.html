@@ -1,0 +1,73 @@
+<h1>Formulário</h1>
+
+<form method="post">
+    <input type="hidden" name="id" value="3" />
+    <input type="text" name="nome" placeholder="Nome" />
+    <input type="email" name="email" placeholder="E-mail" />
+    <input type="password" name="senha" placeholder="Senha" />
+    <textarea name="bio" cols="30" rows="10"></textarea>
+    <div>
+        <input type="radio" name="tipo" value="admin" /> Admin
+        <input type="radio" name="tipo" value="regular" /> Regular
+        <input type="radio" name="tipo" value="guest" /> Guest
+    </div>
+    <div><input type="checkbox" name="termos" /> Aceito os termos de uso</div>
+    <select name="estado">
+        <option value="">Selecione</option>
+        <option value="AC">Acre</option>
+        <option value="AL">Alagoas</option>
+        <option value="AP">Amapá</option>
+        <option value="AM">Amazonas</option>
+        <option value="BA">Bahia</option>
+        <option value="CE">Ceará</option>
+        <option value="DF">Distrito Federal</option>
+        <option value="ES">Espírito Santo</option>
+        <option value="GO">Goiás</option>
+        <option value="MA">Maranhão</option>
+        <option value="MT">Mato Grosso</option>
+        <option value="MS">Mato Grosso do Sul</option>
+        <option value="MG">Minas Gerais</option>
+        <option value="PA">Pará</option>
+        <option value="PB">Paraíba</option>
+        <option value="PR">Paraná</option>
+        <option value="PE">Pernambuco</option>
+        <option value="PI">Piauí</option>
+        <option value="RJ">Rio de Janeiro</option>
+        <option value="RN">Rio Grande do Norte</option>
+        <option value="RS">Rio Grande do Sul</option>
+        <option value="RO">Rondônia</option>
+        <option value="RR">Roraima</option>
+        <option value="SC">Santa Catarina</option>
+        <option value="SP">São Paulo</option>
+        <option value="SE">Sergipe</option>
+        <option value="TO">Tocantins</option>
+    </select>
+    <select name="interesses" multiple size="9">
+        <option value="filmes">Filmes</option>
+        <option value="series">Séries</option>
+        <option value="animes">Animes</option>
+        <option value="games">Games</option>
+        <option value="computadores">Computadores</option>
+        <option value="tecnologia">Tecnologia</option>
+        <option value="esportes">Esportes</option>
+        <option value="música">Música</option>
+        <option value="cinema">Cinema</option>
+    </select>
+    <button formaction="http://localhost:3003/usuarios">Incluir</button>
+    <button formaction="http://localhost:3003/usuarios/3">Alterar</button>
+</form>
+
+<style>
+    input,
+    textarea,
+    select {
+        display: block;
+        margin: 10px 0;
+    }
+
+    input[type='radio'],
+    input[type='checkbox'] {
+        display: inline-block;
+        margin: 10 5px;
+    }
+</style>

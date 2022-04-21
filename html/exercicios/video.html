@@ -1,0 +1,52 @@
+<!-- existem ainda a opção AUTOPLAY para início automatico e CONTROLS para mostrar os controles -->
+<video id="meuVideo" width="800" height="450" controls controlslist="nodownload">
+    <source src="http://files.cod3r.com.br/curso-web/video.mp4" type="video/mp4" />
+    browser não suporta o video
+</video>
+
+<div wm-progresso="meuVideo" class="progresso">
+    <div></div>
+</div>
+
+<div>
+    <button wm-play="meuVideo">Play</button>
+    <button wm-pause="meuVideo">Pause</button>
+</div>
+
+<style>
+    .progresso {
+        height: 20px;
+        width: 500px;
+        border: solid 1px #444;
+        margin: 20px;
+    }
+
+    .progresso div {
+        height: 100%;
+        background: rgb(255, 0, 0);
+        color: azure;
+        text-align: right;
+        font-size: 14px;
+        width: 0%;
+    }
+</style>
+
+<script>
+    configurarVideo = (id) => {
+        const video = document.getElementById(id)
+        video.oncontextmenu = () => false
+        document.querySelector(`[wm-play="${id}"]`).onclick = () => video.play()
+        document.querySelector(`[wm-pause="${id}"]`).onclick = () => video.pause()
+
+        video.ontimeupdate = () => {
+            const progresso = document.querySelector(`[wm-progresso="${id}"] > div`)
+            const duracao = video.duration
+            const atual = video.currentTime
+            const porcentagem = (atual * 100) / duracao
+            progresso.style.width = `${porcentagem}%`
+            progresso.innerHTML = `${porcentagem.toFixed(1)}%`
+        }
+    }
+
+    configurarVideo('meuVideo')
+</script>
