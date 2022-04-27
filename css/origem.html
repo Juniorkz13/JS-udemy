@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Origem CSS: Externo, Interno e Inline</title>
+        <style>
+            body {
+                background-color: aquamarine;
+            }
+        </style>
+        <link rel="stylesheet" href="css/externo.css" />
+        <!-- a preferencia de processamento vem da ordem onde o código está escrito, sempre vai prevalecer o que vier por último -->
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <title>Origem CSS: Externo, Interno e Inline</title>
-    <style>
-        /* ... */
-    </style>
-</head>
-
-<body>
-    <h1>E agora?</h1>
-</body>
-
+    <body style="background-color: coral">
+        <!-- o CSS INLINE tem uma preferência maior, ele sempre será aplicado acima dos outros, embora não seja boa prática usar CSS inline -->
+        <h1>E agora?</h1>
+    </body>
 </html>
