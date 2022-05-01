@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Herança</title>
+        <style>
+            body {
+                font-family: monospace;
+                font-size: 40px;
+                border: solid 3px red;
+                padding: 50px;
+            }
 
-<head>
-    <meta charset="UTF-8">
-    <title>Herança</title>
-    <style>
-        /* ... */
-    </style>
-</head>
+            div {
+                border: inherit; /* comando especificando que quer herdar, já que o border não é herdado por padrão */
+                padding: inherit; /* comando especificando que quer herdar, já que o padding não é herdado por padrão */
+            }
+        </style>
+    </head>
 
-<body>
-    <h1>Herança</h1>
-    <div>Estou herdando</div>
-</body>
-
+    <body>
+        <h1>Herança</h1>
+        <div>Estou herdando</div>
+    </body>
 </html>
