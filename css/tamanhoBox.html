@@ -1,17 +1,31 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <title>Tamanho Box</title>
-    <style>
-        body {
-            font-size: 45px;
-        }
-    </style>
-</head>
-<body>
-    <div>
-        O tamanho do Box é...
-    </div>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Tamanho Box</title>
+        <style>
+            /* a única forma de propagar o border-box para todos os elementos da página, é com um seletor universal, não adianta colocar esta propriedade no body */
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                font-size: 45px;
+                margin: 0;
+            }
+
+            div {
+                background-color: deepskyblue;
+                width: 100%;
+                height: 300px;
+                padding: 100px;
+                border: solid 20px black;
+                /* até este ponto, está estrapolando o tamanho da página */
+                box-sizing: content-box; /* considera o tamanho do box, sem o padding e border, assim, irá estrapolar o tamanho da página */
+                box-sizing: border-box; /* esta propriedade é necessária para que o tamanho do box seja o mesmo do tamanho da página, não deixa estrapolar */
+            }
+        </style>
+    </head>
+    <body>
+        <div>O tamanho do Box é...</div>
+    </body>
 </html>

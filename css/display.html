@@ -1,23 +1,54 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Display</title>
+        <style>
+            body {
+                font-size: 40px;
+                color: #fff;
+                background-color: coral;
+            }
 
-<head>
-    <meta charset="UTF-8">
-    <title>Display</title>
-    <style>
-        /* ... */
-    </style>
-</head>
+            ul {
+                padding: 0;
+            }
 
-<body>
-    <div>Texto 1</div>
-    <span>Texto 2</span>
-    <span>Texto 3</span>
-    <ul>
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
-    </ul>
-</body>
+            div {
+                background-color: seagreen;
+            }
 
+            span {
+                background-color: dodgerblue;
+            }
+
+            li {
+                background-color: purple;
+            }
+
+            div,
+            span,
+            li {
+                width: 50%;
+                width: 200px;
+                height: 80px;
+                padding-top: 30px;
+                text-align: center;
+                display: block; /* bloack: cada elemento será um bloco independente, cada elemento em sua própria linha */
+                display: inline; /* inline: cada elemento será um elemento contido em uma linha */
+                display: inline-block; /* inline-block: cada elemento será um elemento contido em uma linha, mas com um espaço entre eles, independentes */
+            }
+        </style>
+    </head>
+
+    <body>
+        <div>Texto 1</div>
+        <span>Texto 2</span>
+        <span>Texto 3</span>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+    </body>
 </html>
